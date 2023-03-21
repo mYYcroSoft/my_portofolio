@@ -7,6 +7,10 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="assets/css.css">
     <link rel="stylesheet" href="assets/el_an.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-thin-straight/css/uicons-thin-straight.css'>
     <style data-tag="reset-style-sheet">
       html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
@@ -63,6 +67,12 @@
     </div>
 </section>
 
+<svg id="mySVG">
+    <path fill="none" stroke="#08f69b" stroke-width="1" id="triangle" d="M150 0 L75 200 L225 200 Z" />
+    Sorry, your browser does not support inline SVG.
+  </svg>
+
+  
 <section id="service-list-s">
     <div class="mid-line" style="top: 200px" data-inviewport="fade-slide-up"></div>
     <div class="service-list"data-inviewport="fade-slide-up" >
@@ -99,17 +109,25 @@
     <div class="show-case-name" data-inviewport="fade-slide-up">FIVEM SCRIPTS</div>
     <div class="show-case-bck show-case-list" data-inviewport="fade-slide-up">
         <div class="show-case-box">
-            <iframe class="show-case-frame" width="350" height="250" src="https://www.youtube.com/embed/K22RxPTT0y0"></iframe>
+            <iframe class="show-case-frame" width="350" height="250" src="https://www.youtube.com/embed/xbjJohsunyY"></iframe>
         </div>
         <div class="show-case-box">
-            <iframe class="show-case-frame" width="350" height="250" src="https://www.youtube.com/embed/K22RxPTT0y0"></iframe>
+            <iframe class="show-case-frame" width="350" height="250" src="https://www.youtube.com/embed/xbjJohsunyY"></iframe>
         </div>
         <div class="show-case-box">
-            <iframe class="show-case-frame" width="350" height="250" src="https://www.youtube.com/embed/K22RxPTT0y0"></iframe>
+            <iframe class="show-case-frame" width="350" height="250" src="https://www.youtube.com/embed/xbjJohsunyY"></iframe>
         </div>
         <div class="show-case-box">
-            <iframe class="show-case-frame" width="350" height="250" src="https://www.youtube.com/embed/K22RxPTT0y0"></iframe>
+            <iframe class="show-case-frame" width="350" height="250" src="https://www.youtube.com/embed/xbjJohsunyY"></iframe>
         </div>
+        <div class="show-case-box">
+            <iframe class="show-case-frame" width="350" height="250" src="https://www.youtube.com/embed/xbjJohsunyY"></iframe>
+        </div>
+        <div class="show-case-box">
+            <iframe class="show-case-frame" width="350" height="250" src="https://www.youtube.com/embed/xbjJohsunyY"></iframe>
+        </div>
+
+   
         
     </div>
 
@@ -133,5 +151,29 @@
   
 </section>
 <script src="assets/element_a.js"></script>
+<script>
+// Get the id of the <path> element and the length of <path>
+    var triangle = document.getElementById("triangle");
+var length = triangle.getTotalLength();
+
+// The start position of the drawing
+triangle.style.strokeDasharray = length;
+
+// Hide the triangle by offsetting dash. Remove this line to show the triangle before scroll draw
+triangle.style.strokeDashoffset = length;
+
+// Find scroll percentage on scroll (using cross-browser properties), and offset dash same amount as percentage scrolled
+window.addEventListener("scroll", myFunction);
+
+function myFunction() {
+var scrollpercent = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+
+  var draw = length * scrollpercent;
+  
+  // Reverse the drawing (when scrolling upwards)
+  triangle.style.strokeDashoffset = length - draw;
+}
+  </script>
+
 </body>
 </html>
