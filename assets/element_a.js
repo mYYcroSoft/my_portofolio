@@ -34,3 +34,75 @@ function myFunction() {
   // Reverse the drawing (when scrolling upwards)
   triangle.style.strokeDashoffset = length - draw;
 }
+
+
+window.onscroll = function() {scrollFunction(), myFunction()};
+
+function scrollFunction() {
+element_name = document.getElementById("sec_name")
+  if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+    document.getElementById("navbar").style.top = "0px";
+    document.getElementById("navbar").style.width = "100%";
+    $("#sec_name").html("Home")
+    element_name.style.width = "10%"
+  } else {
+    document.getElementById("navbar").style.top = "-50px";
+    $("#sec_name").html("Home")
+    element_name.style.width = "10%"
+  }
+
+
+    if (document.body.scrollTop > 180 || document.documentElement.scrollTop > 180) {
+    $("#sec_name").html("Marketing")
+    element_name.style.width = "13%"
+  }
+
+  if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
+    $("#sec_name").html("Services")
+    element_name.style.width = "20%"
+  }
+  if (document.body.scrollTop > 800 || 
+    document.documentElement.scrollTop > 800) {
+    $("#sec_name").html("Showcase")
+    element_name.style.width = "25%"
+  }
+  if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+    document.getElementById("navbar").style.width = "20%";
+    element_name.style.transform = "rotate(0deg)"
+    element_name.style.top = "5px"
+    element_name.style.left = "35%"
+    
+  }  else {
+    element_name.style.transform = "rotate(-90deg)"
+    element_name.style.top = "500px"
+    element_name.style.left = "-4%"
+
+  }
+  
+}
+
+
+function test(){
+  element_name = document.getElementById("sec_name")  
+  if (state = true) {
+  element_name.style.transform = "rotate(0deg)"
+    element_name.style.top = "5px"
+    element_name.style.left = "35%"
+    state = false
+    console.log(state)
+  } 
+  if (state = false) {
+    element_name.style.transform = "rotate(-90deg)"
+    element_name.style.top = "500px"
+    element_name.style.left = "-4%"
+    state = true
+    console.log(state)
+  }
+}
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
