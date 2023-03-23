@@ -9,10 +9,14 @@
     box-sizing: border-box;
   }
 
+  body{
+    background: #1b1e1f;
+    transition: 1s;
+  }
+
 html, body{
 
     text-align: center;
-    background-color: var(--bk);
     margin: 0;
     padding: 0;
     width: 100%;

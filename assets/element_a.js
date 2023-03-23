@@ -69,13 +69,17 @@ element_name = document.getElementById("sec_name")
   if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
     document.getElementById("navbar").style.width = "20%";
     element_name.style.transform = "rotate(0deg)"
+    document.body.style.backgroundColor = "#262533";
     element_name.style.top = "5px"
     element_name.style.left = "35%"
+
     
   }  else {
     element_name.style.transform = "rotate(-90deg)"
     element_name.style.top = "500px"
     element_name.style.left = "-4%"
+    document.body.style.backgroundColor = "#1b1e1f";
+
 
   }
   
@@ -96,6 +100,7 @@ function test(){
     element_name.style.top = "500px"
     element_name.style.left = "-4%"
     state = true
+    
     console.log(state)
   }
 }
@@ -105,4 +110,5 @@ function myFunction() {
   var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
   var scrolled = (winScroll / height) * 100;
   document.getElementById("myBar").style.width = scrolled + "%";
+
 }
