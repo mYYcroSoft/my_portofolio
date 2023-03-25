@@ -19,8 +19,6 @@ foreach ($files as $f) {
     echo $f . '<br>';
 }
 
-
-
 $data = array (
     "product_name" => "sfm_ai",
     "product_id" => $number,
@@ -38,6 +36,13 @@ $my_data = unserialize(file_get_contents($file));
 // Vypíše data pomocí foreach smyčky
 foreach ($my_data as $key => $value) {
     echo $key . ': ' . $value . '<br>';
+}
+
+// IMAGE SCAN
+$media_dir = scandir('storage/arch_86/media', SCANDIR_SORT_DESCENDING);
+foreach($media_dir as $media_dir){
+    echo $media_dir . '<br>';
+    echo '<image src="storage/arch_86/media/' . $media_dir .'" width="100">';
 }
 
 ?>
