@@ -319,6 +319,12 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
     border: solid #24f481 2px;
     box-shadow: #24f481 5px 5px 15px;
 }
+@media (max-width: 600px) {
+    .service-price {
+      font-size: 10px;
+    }
+  }
+
 @media only screen and (min-width: 375px) and (max-width: 800px) {
     .profil, .service, .box-cont{
         width: 100%;
