@@ -377,7 +377,8 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
 .work-box-text_cont{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: #262626;
-    width: 50%;
+    min-width: auto;
+    max-width: 50%;
     padding: 50px;
  
 }
@@ -478,24 +479,22 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(15px);
     border-radius: 15px;
-    width: 30%;
+    width: 80%;
     height: 90%;
-    top: 5px;
-    left: 35%;
+    top: 50px;
+    left: 10%;
     z-index: 5;
     transition: 0.5s;
-    border: solid #24f481 2px;
-    box-shadow: #24f481 0.5px 0.5px 15px;
+
   }
 
   .catalog_img{
     position: relative;
-    width: 90%;
+    width: 45%;
     left: 5%;
     height: 250px;
     border-radius: 15px;
-    border: solid #24f481 2px;
-    box-shadow: #24f481 0.5px 0.5px 15px;
+
 
   }
 

@@ -12,8 +12,8 @@ function show_album(arch, img){
     var df_img = images_array[i];
     var df = '../images/' + arch + '/' + df_img
     document.getElementById('img_ct').insertAdjacentHTML('beforeend', '<img class="catalog_img"  src="' + df +'"> <br>');
-    
     console.log(images_array[i]);
+    
 }
 
    
