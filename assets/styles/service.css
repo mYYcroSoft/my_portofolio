@@ -38,14 +38,12 @@
 }
 
 .service-text{
-
     font-size: 20px;
- 
- 
 }
 
 .service-price{
     position: relative;
+    width: 100%;
     top: 100px;
     background: linear-gradient(90deg, rgba(33,207,111,1) 26%, rgba(33,207,182,1) 58%, rgba(33,207,182,1) 100%);
     font-size: 20px;
@@ -62,4 +60,27 @@
         width: 95%;
         left: 1%;
     }
+}
+
+@media (max-width: 650px) {
+    .service-list{
+        width: 95%;
+        left: 1%;
+    }
+    .service-name{
+        font-size: 15px;
+    }
+    .service-text{
+        font-size: 15px;
+    }
+    .service-box{
+margin-left: 5px;
+width: 32%;
+    }
+}
+.service-price{
+    font-size: 15px;
+    padding: 1px;
+    width: 100%;
+
 }

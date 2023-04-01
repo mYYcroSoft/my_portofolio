@@ -54,9 +54,13 @@
 }
 
 .work_image{
+    display: block;
     position: absolute;
     width: 30%;
     height: 450px;
+    top: auto;
+    left: auto;
+
 }
 
 .for-left{
@@ -68,7 +72,9 @@
     left: 0px;
 }
 .wk_left{
+    position: absolute;
     text-align: left;
+    left: 0px;
 }
 .wk_right{
     position: absolute;
@@ -126,5 +132,40 @@
     #show-case{
         margin: 100px;
     }
+
+  }
+
+
+  @media (max-width: 650px) {
+    #show-case{
+        margin: 1px;
+    }
+
+    .work-box{
+        left: -13%;  
+        max-width: 250%;
+   
+        min-width: 250%;
+        height: 850;
+    }
+    .work_box_text_title{
+        font-size: 35px;
+    }
+    .work_box_text_text{
+        font-size: 15px;
+        letter-spacing: 0px;
+    }
+    .work_image{
+   top: 400px;
+   left: 2%;
+   height: 50%;
+    }
+.wk_right{
+    position: relative;
+}
+
+.for-right{
+    left: 0px;
+}
 
   }

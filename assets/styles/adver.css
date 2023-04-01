@@ -15,6 +15,7 @@
     }
     
     .colmun-adver{
+
         min-width: 25%;
         max-width: 30%;
         height: 100%;
@@ -97,5 +98,32 @@
     max-width: 95%;
     max-height: auto;
     left: 2.5%;
+}
+  }
+@media (max-width: 650px) {
+.adver-container{
+    position: relative;
+    min-width: 95%;
+    max-width: 95%;
+    height: auto;
+
+}
+
+.colmun-title{
+    font-size: 20px;
+}
+
+.colmun-text{
+    font-size: 15px;
+}
+
+.box-title{
+    font-size: 20px;
+}
+.box-text{
+    font-size: 15px;
+}
+.box-money{
+    font-size: 15px;
 }
   }
